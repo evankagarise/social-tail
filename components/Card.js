@@ -1,8 +1,12 @@
 import React from 'react'
-
-export default function Card({children}) {
+let noPadding = Boolean;
+let classes = 'bg-white shadow-md shadow-gray-300 rounded-md mb-5 overflow-hidden'
+if (!noPadding) {
+  classes += ' p-4';
+}
+export default function Card({children,noPadding}) {
      return (
-    <div className='bg-white shadow-md shadow-gray-300 rounded-md p-4 mb-5'>
+    <div className={classes}>
         {children}
     </div>
   )
